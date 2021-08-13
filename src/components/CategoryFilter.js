@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-function CategoryFilter({ currentCatgory, setCategory, categories }) {
+function CategoryFilter({ currentCategory, setCategory, categories }) {
   // const [selectedStatus, setSelectedStatus] = useState(false)
   const button = categories.map((category) => {
-
+  const className = category === currentCategory ? "selected" : null;
     return (<button onClick={onFilterSelection}
-      className={currentCatgory === category ? "selected" : ''}
+      className={className}
       key={category}>
       {category}
     </button>

@@ -31,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <h2>My tasks</h2>
-      <CategoryFilter categories={CATEGORIES} currentCatgory={currentCategory} setCategory={setCategory}/>
+      <CategoryFilter categories={CATEGORIES} currentCategory={currentCategory} setCategory={setCategory}/>
       <NewTaskForm categories={CATEGORIES} onTaskFormSubmit={onTaskFormSubmit}/>
       <TaskList tasks={filteredTasksArray} deleteTask={deleteTask}/>
     </div>

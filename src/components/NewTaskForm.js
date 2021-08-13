@@ -8,9 +8,12 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
   const [selectedCategory, setCategory] = useState('')
   const [currentText, setText] = useState('')
 
-  function handleForm(event){
+  function handleCategory(event){
     console.log(event)
     setCategory(event.target.value)
+  }
+  function handleText(event){
+    console.log(event)
     setText(event.target.value)
   }
 
@@ -24,11 +27,11 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
     <form onSubmit={handleSubmit} className="new-task-form">
       <label>
         Details
-        <input onChange={handleForm} value={currentText} type="text" name="text" />
+        <input onChange={handleText} value={currentText} type="text" name="text" />
       </label>
       <label>
         Category
-        <select onChange={handleForm} value={selectedCategory} name="category">
+        <select onChange={handleCategory} value={selectedCategory} name="category">
           {categoryOptions}
         </select>
       </label>
