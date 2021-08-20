@@ -9,11 +9,9 @@ function NewTaskForm({categories, onTaskFormSubmit}) {
   const [currentText, setText] = useState('')
 
   function handleCategory(event){
-    console.log(event)
     setCategory(event.target.value)
   }
   function handleText(event){
-    console.log(event)
     setText(event.target.value)
   }
 

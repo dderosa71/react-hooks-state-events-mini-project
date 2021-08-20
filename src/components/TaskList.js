@@ -3,7 +3,7 @@ import Task from "./Task.js"
 
 function TaskList({tasks, deleteTask}) {
   const taskArray = tasks.map(task=>
-    (<Task key={task.text} category={task.category} task={task.text} deleteTask={deleteTask}/>)
+    (<Task key={task.text} category={task.category} text={task.text} deleteTask={deleteTask}/>)
   )
 
   return (

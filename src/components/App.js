@@ -11,7 +11,7 @@ console.log({ CATEGORIES, TASKS });
 
 function App() {
   const [tasksArray, setTasksArray] = useState(TASKS)
-  const [currentCategory, setCategory] = useState('All')
+  const [currentCategory, setCategory] = useState('')
 
   const filteredTasksArray = tasksArray.filter((task) => {
     if (currentCategory === 'All'){

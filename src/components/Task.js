@@ -1,14 +1,14 @@
 import React from "react";
 
-function Task({task, category, deleteTask}) {
+function Task({text, category, deleteTask}) {
   function onDelete(){
-    deleteTask(task)
+    deleteTask(text)
   }
 
   return (
     <div className="task">
       <div className="label">{category}</div>
-      <div className="text">{task}</div>
+      <div className="text">{text}</div>
       <button onClick={onDelete} className="delete">X</button>
     </div>
   );
